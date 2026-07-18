@@ -504,3 +504,50 @@ body.is-ready .hero-art{
   .floating-gym-bg .dumbbell{opacity:.045}
   .hero:after{display:none}
 }
+
+
+/* Mobile/WebView visibility fallback */
+body.force-visible .hero-copy,
+body.force-visible .hero-art{
+  opacity:1 !important;
+  transform:none !important;
+  animation:none !important;
+}
+
+body.force-visible .loader{
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none !important;
+}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-copy,
+  .hero-art,
+  .reveal,
+  .stat{
+    opacity:1 !important;
+    transform:none !important;
+    animation:none !important;
+  }
+
+  .loader{
+    opacity:0 !important;
+    visibility:hidden !important;
+    pointer-events:none !important;
+  }
+}
+
+.hero{
+  min-height:100svh;
+}
+
+@supports(height:100dvh){
+  .hero{min-height:100dvh}
+}
+
+@media(max-width:650px){
+  .hero{
+    min-height:100svh;
+    align-content:center;
+  }
+}

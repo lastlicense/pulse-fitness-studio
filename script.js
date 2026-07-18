@@ -48,3 +48,16 @@ const siteHeader=document.querySelector('.site-header');
 window.addEventListener('scroll',()=>{
   siteHeader?.classList.toggle('scrolled',scrollY>40);
 },{passive:true});
+
+
+// Safety fallback for iOS Safari, Telegram and other in-app browsers.
+document.addEventListener('DOMContentLoaded',()=>{
+  window.setTimeout(()=>{
+    document.body.classList.add('force-visible','is-ready');
+    document.documentElement.style.overflow='';
+  },1200);
+});
+window.addEventListener('pageshow',()=>{
+  document.body.classList.add('force-visible','is-ready');
+  document.documentElement.style.overflow='';
+});
