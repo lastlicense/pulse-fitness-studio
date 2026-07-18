@@ -551,3 +551,120 @@ body.force-visible .loader{
     align-content:center;
   }
 }
+
+
+/* ===== FINAL PHONE HERO FIX =====
+   Removes the empty 100svh gap and keeps the heading below the fixed navbar. */
+@media(max-width:650px){
+  .site-header{
+    top:8px;
+    height:62px;
+  }
+
+  .hero{
+    min-height:auto !important;
+    height:auto !important;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:stretch;
+    padding:92px 16px 48px !important;
+    gap:24px;
+  }
+
+  .hero-copy{
+    position:relative;
+    z-index:5;
+    width:100%;
+    padding-top:10px;
+    overflow:visible;
+  }
+
+  .portfolio-label{
+    margin:0 0 12px;
+    line-height:1.35;
+  }
+
+  .hero .eyebrow{
+    margin:0 0 10px;
+    font-size:.68rem;
+    line-height:1.35;
+  }
+
+  .hero h1{
+    width:100%;
+    margin:8px 0 18px;
+    padding:.08em 0 .05em;
+    overflow:visible;
+    font-size:clamp(2.8rem,14.2vw,4.25rem);
+    line-height:.94;
+    letter-spacing:-.065em;
+  }
+
+  .hero h1 span{
+    display:block;
+    overflow:visible;
+    padding-top:.03em;
+  }
+
+  .hero h1 .accent{
+    margin-top:.03em;
+  }
+
+  .lead{
+    max-width:none;
+    margin:0 0 20px;
+    font-size:.95rem;
+    line-height:1.55;
+  }
+
+  .actions{
+    margin-top:0;
+  }
+
+  .hero-art{
+    flex:none;
+    width:100%;
+    min-height:350px !important;
+    height:350px;
+    margin:0;
+    border-radius:24px;
+  }
+
+  .equipment-scene{
+    width:min(330px,86%);
+  }
+
+  .weight-plate{
+    width:66%;
+  }
+
+  .badge.one{
+    left:10px;
+    top:16%;
+  }
+
+  .badge.two{
+    right:10px;
+    bottom:10%;
+  }
+}
+
+/* Very narrow phones */
+@media(max-width:390px){
+  .hero{
+    padding-left:13px !important;
+    padding-right:13px !important;
+  }
+
+  .hero h1{
+    font-size:clamp(2.55rem,13.7vw,3.45rem);
+    line-height:.96;
+    letter-spacing:-.055em;
+  }
+
+  .hero-art{
+    min-height:325px !important;
+    height:325px;
+  }
+}
